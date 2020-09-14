@@ -1,0 +1,27 @@
+{
+  "name": "konvajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=true electron .",
+    "startwin": "set DEBUG=true & electron .",
+    "dev:macos": "electron-builder --macos --dir",
+    "pro:macos": "electron-builder --macos",
+    "dev:windows": "electron-builder --windows --dir",
+    "pro:windows": "electron-builder --windows"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.0",
+    "electron-builder": "^22.8.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "konva": "^7.0.6",
+    "popper.js": "^1.16.1"
+  }
+}

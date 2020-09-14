@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ON-LASER Designer</title>
+  <script src="./node_modules/konva/konva.min.js"></script>
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f0f0f0;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 175px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #33465C;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    .layernav {
+      height: 100%;
+      width: 175px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: #33465C;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="sidenav">
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2"><i class="fas fa-file"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2"><i class="fas fa-archive"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2" onClick="addText('Simple Text')"><i class="fas fa-font"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2" onclick="addRect(100, 100)"><i class="far fa-square"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2" onclick="addCircle(40)"><i class="far fa-circle"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2"><i class="fas fa-minus"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2" onclick="addImage('./image.bmp')"><i class="far fa-image"></i></button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2"><i class="fas fa-vector-square"></i></button>
+    <!--<button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2"><i class="fas fa-times"></i></button>-->
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2">END 1</button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2">END 2</button>
+    <button type="button" class="btn btn-light btn-lg col-10 mb-2 ml-2">SIDE</button>
+  </div>
+  
+  <div id="stage-parent">
+    <div id="container"></div>
+  </div>
+
+  <div class="layernav">
+    <ul id="layers" class="list-group">
+    </ul>
+  </div>
+
+  <script src="./background.js"></script>
+  <script src="./circle.js"></script>
+  <script src="./rect.js"></script>
+  <script src="./text.js"></script>
+  <script src="./image.js"></script>
+  <script src="./main.js"></script>
+  <!--<script src="./node_modules/jquery/dist/jquery.min.js"></script>-->
+  <script>
+    window.jQuery = window.$ = require('jquery');
+  </script>
+  <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./js/dropzone.js"></script>
+</body>
+
+</html>
