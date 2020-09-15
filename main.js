@@ -116,15 +116,14 @@ function selectObject(e) {
 addBackground(200);
 
 var tr = new Konva.Transformer({
-    keepRatio: true,
-    zIndex: -100
+    keepRatio: true
 });
 tr.nodes([]);
 layer.add(tr);
 
 // add a new feature, lets add ability to draw selection rectangle
 var selectionRectangle = new Konva.Rect({
-    fill: 'rgba(0,0,255,0.5)',
+    fill: 'rgba(255,127,0,0.5)',
 });
 layer.add(selectionRectangle);
 
